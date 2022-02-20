@@ -1,0 +1,27 @@
+.label {
+    display: block;    
+    text-align: start;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.input {
+    display: block;
+    width: 90%;
+    margin-top: 5px;
+    padding: 6px 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;  
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;  
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
