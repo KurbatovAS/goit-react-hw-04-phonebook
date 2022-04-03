@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './ContactItems.module.css';
 
-function ContactItems ({contact, clickHandler}) {
-    console.log('contact', contact);
+function ContactItems ({contact, clickHandler}) {    
     const {name, number} = contact;
 
     return (

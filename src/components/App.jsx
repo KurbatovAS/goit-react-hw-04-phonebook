@@ -8,7 +8,7 @@ import ContactList from './ContactList';
 import {
   getContactsFromLS,
   addContactsToLS,
-} from './LocalStorage/LocalStorage';
+} from '../helpers/LocalStorage/LocalStorage';
 
 const initialContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
