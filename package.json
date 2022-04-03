@@ -40,5 +40,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "**Read in other languages: [Русский](README.md), [Polska](README.pl.md).**",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KurbatovAS/goit-react-hw-04-phonebook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KurbatovAS/goit-react-hw-04-phonebook/issues"
   }
 }
