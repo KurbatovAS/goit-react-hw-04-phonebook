@@ -1,9 +1,41 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import s from './ContactForm.module.css';
 
+
+
 function ContactForm({ onFormSubmit }) {
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+
+  function onChangeHandler (e) {
+    const {name, value} = e.target;
+
+    switch(name) {
+      case 'name':
+        setName(value);
+        break;
+
+      case 'number':
+        setNumber(value);
+        break;
+      
+      default:
+        return;
+    }
+  };
+
+  function onFormSubmitHandler (e) {
+    e.preventDefault();
+
+    onFormSubmit(name, number);
+
+    setName('');
+    setNumber('');
+  }
+
   return (
-    <form name="contact_form" onSubmit={onFormSubmit} className={s.form}>
+    <form name="contact_form" onSubmit={onFormSubmitHandler} className={s.form}>
       <label className={s.label}>
         Name
         <input
@@ -15,6 +47,8 @@ function ContactForm({ onFormSubmit }) {
           required
           placeholder="John Smith"
           className={s.input}
+          value={name}
+          onChange={onChangeHandler}
         />
       </label>
       <label className={s.label}>
@@ -27,6 +61,8 @@ function ContactForm({ onFormSubmit }) {
           required
           placeholder="226-48-26"
           className={s.input}
+          value={number}
+          onChange={onChangeHandler}
         />
       </label>
       <button type="submit" className={s.button}>
